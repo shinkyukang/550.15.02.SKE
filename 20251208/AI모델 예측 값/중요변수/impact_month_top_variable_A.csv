@@ -1,0 +1,21 @@
+﻿시작일,X인자,X인자 명,Reference,빈도수,방향,영향도
+2025-12-08,close_residual,잔차(Residual),LSEG(Refinitiv)/Platts,20,-,10
+2025-12-08,rsi_14,14일 RSI(상대강도지수),LSEG(Refinitiv)/Platts,16,-,3.81
+2025-12-08,PGAEY00,싱가포르 92R 가솔린 크랙,S&P Global-Platts,20,+,2.97
+2025-12-08,NHOC.01,난방유 선물,LSEG(Refinitiv),19,-,2.84
+2025-12-08,92R/LSFO,가솔린/벙커유 스프레드(92R/LSFO),S&P Global-Platts,14,+,2.43
+2025-12-08,kdjk,스토캐스틱 오실레이터의 %K 값(빠른 선),LSEG(Refinitiv)/Platts,14,-,1.97
+2025-12-08,TRUS10T-TRUS2YT,미국 국채 10년물과 2년물 금리차(수익률곡선 스프레드),LSEG(Refinitiv),11,-,1.74
+2025-12-08,U:USO,WTI 추종 ETF(미국 원유 펀드),LSEG(Refinitiv),12,-,1.54
+2025-12-08,LLCC.02-LLCC.03,Brent 2nd/3rd(Intermonth Spread),LSEG(Refinitiv),16,-,1.26
+2025-12-08,AMFSA00,싱가포르 LSFO 크랙,S&P Global-Platts,10,+,1.15
+2025-12-08,WCRNTUS2,미국 원유 일일 순수입량(천 배럴),EIA,10,+,1.14
+2025-12-08,macdh,MACD 히스토그램(MACD - MACDS),LSEG(Refinitiv)/Platts,16,-,1.11
+2025-12-08,WCEIMP22_4WEEK_AVG,미국 중서부(PADD 2)의 전략비축유 제외 상업용 원유 수입량 4주 평균(천 배럴/일),EIA,10,+,0.94
+2025-12-08,GPRD_THREAT,GPR(Geopolitical Risk) 위협 기반 리스크 지수(THREAT),matteoiacoviello.com,14,+,0.9
+2025-12-08,D-AASFA00,초대형 원유운반선 운임지수(Worldscale),S&P Global-Platts,13,-,0.87
+2025-12-08,GPRD,GPR(Geopolitical Risk) 지수(GPRD),matteoiacoviello.com,14,+,0.86
+2025-12-08,PJABF00,싱가포르 제트유 크랙,S&P Global-Platts,14,+,0.82
+2025-12-08,.OVX,원유 변동성 지수,LSEG(Refinitiv),11,+,0.7
+2025-12-08,NHOC.01-NCLC.01,난방유 선물 크랙,LSEG(Refinitiv),13,+,0.7
+2025-12-08,AAOVC00,싱가포르 가스오일 크랙(10ppm),S&P Global-Platts,16,+,0.66

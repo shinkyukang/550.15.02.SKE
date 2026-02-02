@@ -1,0 +1,210 @@
+{
+  "main": {
+    "id": "80f8c3d2e9b88915",
+    "type": "split",
+    "children": [
+      {
+        "id": "303c721c4d188317",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "281e314e76d75c80",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20260118/full_states_log_2026-01-26.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "full_states_log_2026-01-26"
+            }
+          },
+          {
+            "id": "16eb7005f4ea3012",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20260118/full_states_log_2026-01-26_kor.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "full_states_log_2026-01-26_kor"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fed68615f4a46bdd",
+    "type": "split",
+    "children": [
+      {
+        "id": "b056bd7af5500b0f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cfdb60ae512865b2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "021be0d0bf0104ec",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "08e131395aaef588",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 417.5
+  },
+  "right": {
+    "id": "9756e772d093fa9a",
+    "type": "split",
+    "children": [
+      {
+        "id": "0216b1976ff4512e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "782d77f072fcc624",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "20260118/full_states_log_2026-01-26_kor.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for full_states_log_2026-01-26_kor"
+            }
+          },
+          {
+            "id": "c893deb4ed4a78d2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "20260118/full_states_log_2026-01-26_kor.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from full_states_log_2026-01-26_kor"
+            }
+          },
+          {
+            "id": "40384a038838f950",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3a1496e521c2e2ea",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "0ea8afdf0f80ff3e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "20260118/full_states_log_2026-01-26_kor.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of full_states_log_2026-01-26_kor"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "16eb7005f4ea3012",
+  "lastOpenFiles": [
+    "obsidian_vault",
+    "20260118/full_states_log_2026-01-26.md",
+    "20260118/full_states_log_2026-01-26_kor.md",
+    "full_states_log_2026-01-26_kor.pdf",
+    "Explainability_Crude_SKE/Test of Obsidian.md"
+  ]
+}

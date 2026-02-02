@@ -1,0 +1,21 @@
+﻿시작일,X인자,X인자 명,Reference,빈도수,방향,영향도
+2026-01-12,U:USO,WTI 추종 ETF(미국 원유 펀드),LSEG(Refinitiv),20,-,10
+2026-01-12,close_seasonal,계절성(Seasonal),LSEG(Refinitiv)/Platts,20,+,8.89
+2026-01-12,close_residual,잔차(Residual),LSEG(Refinitiv)/Platts,20,-,8.56
+2026-01-12,92R/LSFO,가솔린/벙커유 스프레드(92R/LSFO),S&P Global-Platts,20,-,3.41
+2026-01-12,D-AASFA00,초대형 원유운반선 운임지수(Worldscale),S&P Global-Platts,20,-,2.42
+2026-01-12,volume,거래량(Volume),LSEG(Refinitiv)/Platts,20,-,2.41
+2026-01-12,GPRD_MA7,GPR(Geopolitical Risk) 7일 이동평균 지수,matteoiacoviello.com,20,+,2.37
+2026-01-12,WRPEXUS2_4WEEK_AVG,4주 평균 미국 총 석유제품 수출량(천 배럴),EIA,20,-,2.25
+2026-01-12,WCEIMP22,미국 중서부(PADD 2) 지역의 상업용 원유 수입량(전략비축유 제외. 천 배럴/일),EIA,20,+,2.16
+2026-01-12,WRPNTUS2_4WEEK_AVG,4주 평균 미국 총 석유제품 순수입량(천 배럴),EIA,20,-,1.84
+2026-01-12,TDJPYSP,달러/엔 환율(USD/JPY),LSEG(Refinitiv),20,+,1.83
+2026-01-12,CHLPRR1YR,중국 기준금리(Loan Prime Rate 등),LSEG(Refinitiv),20,-,1.7
+2026-01-12,PJABS00,제트유 1st/2nd(Intermonth Spread),S&P Global-Platts,20,+,1.48
+2026-01-12,WDISTP31,미국 멕시코만 연안(PADD 3) 지역 증류 연료유 재고(천 배럴),EIA,20,-,1.4
+2026-01-12,WTTEXUS2_4WEEK_AVG,미국 원유 및 석유제품 4주 평균 수출량(천 배럴/일),EIA,20,-,1.36
+2026-01-12,GPRD_MA30,GPR(Geopolitical Risk) 30일 이동평균 지수,matteoiacoviello.com,20,+,1.33
+2026-01-12,GPRD_THREAT,GPR(Geopolitical Risk) 위협 기반 리스크 지수(THREAT),matteoiacoviello.com,20,+,1.32
+2026-01-12,GPRD,GPR(Geopolitical Risk) 지수(GPRD),matteoiacoviello.com,20,+,1.27
+2026-01-12,WD0ST_R30_1,미국 멕시코만 연안(PADD 3) 지역의 0~15ppm 저황 증류 연료유 재고(천 배럴),EIA,20,-,1.27
+2026-01-12,WTTEXUS2,미국의 원유 및 석유제품 주간 수출량(천 배럴),EIA,20,-,1.19
