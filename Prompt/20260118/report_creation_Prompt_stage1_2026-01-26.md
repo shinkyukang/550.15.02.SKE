@@ -20,16 +20,16 @@ STAGE_NOTE = "이후 2단계에서 이 1개월 View를 향후 1주일 단기 시
 
 ##### DATE_RANGE 자동 생성 규칙
 
-- `news_report`의 관측 범위는 **오늘 기준 최근 30일**로 설정한다.
+- `news_report`의 관측 범위는 **오늘 기준 최근 1개월**로 설정한다.
 - 표기 형식은 반드시 아래를 따른다.
 
 ```
-최근 30일(YYYY-MM-DD~YYYY-MM-DD)
+최근 1개월(YYYY-MM-DD~YYYY-MM-DD)
 ```
 
 - 정의
   - 종료일(End): 오늘 날짜
-  - 시작일(Start): 오늘 날짜에서 30일 전
+  - 시작일(Start): 오늘 날짜에서 1개월 전
 - 출력 및 기준 서술 시 반드시 위 형식의 DATE_RANGE를 생성해 사용한다.
 
 ---
@@ -54,7 +54,7 @@ BALANCE_SENTENCE = f"다만 {COUNTER_SCENARIO} 요인도 존재하며, 단기 �
  아래 5개의 자료가 주어지며, **모든 자료를 반드시 활용**하여 아래 3가지 작업을 순서대로 수행하고 **결과를 한 번에 출력**하세요.
 
 - `fundamentals_report` 최근 4주간 펀더멘털 요약 표 + Quality Control Checklist
-- `news_report` DATE_RANGE(자동 생성된 최근 30일) 기준 뉴스/매크로 요약 및 표(출처 포함)
+- `news_report` DATE_RANGE(자동 생성된 최근 1개월) 기준 뉴스/매크로 요약 및 표(출처 포함)
 - `final_trade_decision` 기존 트레이딩 아이디어와 논리(매수/매도 권고 포함 가능)
 - `bear_history` LLM이 작성한 강한 Bear(하락) 논리 요약(내부 분석)
 - `bull_history` LLM이 작성한 강한 Bull(상승) 논리 요약(내부 분석)
@@ -157,7 +157,7 @@ news_report에 A~D가 없거나 일부만 있는 경우, 아래 절차를 수행
 
 **검색 범위**
 
-- 기본: DATE_RANGE(최근 30일)
+- 기본: DATE_RANGE(최근 1개월)
 - 국제기구 전망은 발표 주기 고려 → **최근 3개월까지 확장 허용**
 
 **출처 우선순위**

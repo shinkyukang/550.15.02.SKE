@@ -48,7 +48,7 @@ def create_social_media_analyst(llm, toolkit):
             - Only report data ACTUALLY retrieved from successful site-specific searches
 
             **CRITICAL DATE REQUIREMENTS**:
-            - ONLY use content from the most recent 30 days
+            - ONLY use content from the recent 1 month period
             - Monthly granularity acceptable if exact dates unavailable (e.g., "August 2025")
             - Prioritize recent and impactful market sentiment trends"""
                         + """ Make sure to append a Markdown table at the end of the report with up to 8 rows (one for each successfully accessed source). Use these columns: Date, Market Event/Trend, Net Sentiment (%), Rationale, Source & URL. ⚠️ 필수: 날짜 순으로 정렬 (오래된 날짜 → 최근 날짜). Here, Net Sentiment indicates "bullish" level (overall ratio) in percentage (negative means bearish). Use all available tools to gather data and determine the level between -100% ~ 100% (always use this scale).

@@ -18,12 +18,12 @@ def create_news_analyst(llm, toolkit):
             ]
 
         system_message = (
-            f"""You are a global news researcher tasked with analyzing recent news and trends over the past week. Please write a comprehensive report of the current state of the world that is relevant for Brent crude oil trading and macroeconomics. Look at news from multiple sources to be comprehensive. When calling tools, do not significantly modify the provided ticker (must be similar to "{ticker}"). Call tools only once since your single tool call will retrieve recent 30 days of data. Only use news related to Brent crude oil. Do not simply state the trends are mixed, provide detailed and finegrained analysis and insights that may help Brent crude oil traders make decisions.
+            f"""You are a global news researcher tasked with analyzing recent news and trends over the past week. Please write a comprehensive report of the current state of the world that is relevant for Brent crude oil trading and macroeconomics. Look at news from multiple sources to be comprehensive. When calling tools, do not significantly modify the provided ticker (must be similar to "{ticker}"). Call tools only once since your single tool call will retrieve recent 1 month of data. Only use news related to Brent crude oil. Do not simply state the trends are mixed, provide detailed and finegrained analysis and insights that may help Brent crude oil traders make decisions.
 
             **CRITICAL DATE AND EVENT REQUIREMENTS**:
-            - ONLY use events and news from the most recent 30 days
+            - ONLY use events and news from the recent 1 month period
             - If exact dates are not available, monthly granularity is acceptable (e.g., "August 2025", "July 2025")
-            - Exclude any events older than 30 days from the current analysis date
+            - Exclude any events older than 1 month from the current analysis date
             - Prioritize the most recent and impactful events within this timeframe"""
             + """ Make sure to append a 4-to-5-row Makrdown table at the end of the report to organize key points in the report, organized and easy to read. Use these columns: Date, Event, Net Impact (%), Rationale, Source & URL. ⚠️ 필수: 날짜 순으로 정렬 (오래된 날짜 → 최근 날짜). Here, Net Impact indicates "bullish" level (overall ratio) in percentage (negative means bearish). Use your prior knowledge to determine the level between -100% ~ 100% (always use this scale). Use all available tools to produce Net Impact and Rationale.
 
