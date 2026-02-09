@@ -1,8 +1,8 @@
-### # 유가 예측
+# 유가 예측
 
-### 활용 데이터
+## 활용 데이터
 
-Platts , EIA, LSEG(Refinitiv), Matteoiacoviello Risk index
+### Platts , EIA, LSEG(Refinitiv), Matteoiacoviello Risk index 데이터 수집
 
 Platts: Excel Add-in 기능을 활용하여 모델에서 쓰는 60 여개 변수를 수집하고 스프레드 변수 계산
  (Windows PC)
@@ -24,6 +24,9 @@ https://www.matteoiacoviello.com/gpr_files/data_gpr_daily_recent.xls
 모델 예측 전산 작업은 데이터 전처리 -> 모델 예측 -> 중요변수 추출 -> 상관계수 계산 으로 진행
 
 (이후 결과 파일 집계, 정리 / 전망보고서 작성 / 플랫폼 데이터 업로드는 Tech VDI, Local PC 환경에서 진행함)
+
+
+### 데이터 전처리 -> 모델 예측 -> 중요변수 추출 -> 상관계수 계산
 
 데이터 전처리 단계
 

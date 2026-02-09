@@ -1,0 +1,126 @@
+
+{
+  "stage_0": {
+    "process": "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Code/oil_forecast_report/",
+    "input": [
+      "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Code/oil_forecast_report/marketagents/data/AA-OIL_BRENT.csv",
+      "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Code/oil_forecast_report/marketagents/data/recent_x_data.csv"
+    ],
+    "output": "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Code/oil_forecast_report/eval_results/Brent crude oil price/MarketAgentsStrategy_logs/full_states_log_YYYY-MM-DD.json"
+  },
+  "stage_1": {
+    "process": "chatgpt5.2 in web browser",
+    "input": {
+      "prompt_file": "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/report_creation_Prompt_stage1_260126.md",
+      "prompt_file_detail": {
+        "instruction": "Input 'increase' or 'decrease' in place of {MAIN_SCENARIO} of 'report_creation_Prompt_stage1_260126.md'. Determine whether it is an 'increase' or 'decrease' based on the price difference between the average of the closest 5-day predicted data and the last earnings closing price.",
+        "data_source": {
+          "path": "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/daily_predictions.csv",
+          "path": "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/full_states_log_2026-01-26.json"
+        },
+        "variable_mapping": {
+          "{BASE_PRICE}": "y_base (last earnings closing price)",
+          "{FORECAST_PRICE}": "prediction (average of the closest 5-day predicted data)"
+        }
+      },
+      "MarketAgentsStrategy_logs": {
+        "path": "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/full_states_log_YYYY-MM-DD.json"
+      },
+    },
+    "output": "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/stage1_result_YYMMDD.md"
+  },
+  "stage_2": {
+    "process": "chatgpt5.2 in web browser",
+    "input": [
+      "prompt_file":"report_creation_Prompt_stage2_260126.md",
+      "prompt_file_detail": {
+        "instruction": {
+          "Input 'increase' or 'decrease' in place of {MAIN_SCENARIO} of 'report_creation_Prompt_stage2_260126.md' as same as 'report_creation_Prompt_stage1_260126.md'",
+          "Input '{DATE_RANGE}' of 'DATE_RANGE = {DATE_RANGE}'' of 'report_creation_Prompt_stage1_260126.md'. get data from stage1_result_YYMMDD.md, which is same as '{DATE_RANGE}'' of DATE_RANGE = {DATE_RANGE} from 'report_creation_Prompt_stage1_260126.md'",
+          "Input '{BASE_PRICE}' of 'BASE_PRICE = {BASE_PRICE}'of 'report_creation_Prompt_stage1_260126.md', '{FORECAST_PRICE}'' of 'FORECAST_PRICE = {FORECAST_PRICE}' of 'report_creation_Prompt_stage1_260126.md'"
+        },
+      variable_mapping": {
+        "{DATE_RANGE}": "DATE_RANGE from stage1_result_YYMMDD.md",
+        "{BASE_PRICE}": "BASE_PRICE from stage1_result_YYMMDD.md",
+        "{FORECAST_PRICE}": "FORECAST_PRICE from stage1_result_YYMMDD.md"
+      },
+      "stage1_result_YYMMDD.md",
+      "oil_market_lexicon_v3.json"
+    ],
+    "output": "'SKT_유가전망_AI모델_전망리포트_브렌트유_260126.md' without appendix 2, 3, 4.",
+    "comment": {
+      "appendix_1_source_description": "appendix 1 comes from '[1-A] of /Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/stage1_result_YYMMDD.md'",
+      "appendix_2_3_4_sources": [
+        "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/impact_category_monthly.png",
+        "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/impact_week_top_variable_A.png",
+        "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/impact_week_top_variable_B.png",
+        "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/impact_month_top_variable_A.png",
+        "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/impact_month_top_variable_B.png"
+      ]
+    }
+  }
+}
+
+
+
+
+
+
+# stage_0.
+
+# 	process:
+# 		/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Code/oil_forecast_report/
+
+# 	input:
+# 		/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Code/oil_forecast_report/marketagents/data/AA-OIL_BRENT.csv
+# 		/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Code/oil_forecast_report/marketagents/data/recent_x_data.csv
+
+# 	output: 
+# 		/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Code/oil_forecast_report/eval_results/Brent crude oil price/MarketAgentsStrategy_logs/full_states_log_2026-01-26.json
+
+
+
+
+# stage_1.
+
+# 	process:
+# 		chatgpt5.2 in web browser 
+
+# 	input:
+# 		유가 프롬프트_stage1_260126.md
+# 		Input 'increase' or 'decrease' in place of {MAIN_SCENARIO} of '유가 프롬프트_stage1_260126.md'. Determine whether it is an 'increase' or 'decrease' based on the price difference between the average of the closest 5-day predicted data and the last earnings closing price. Get the data from "/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/daily_predictions.csv", 'y_base' as the last earnings closing price which is {BASE_PRICE}, and 'prediction'  as the average of the closest 5-day predicted data which is {FORECAST_PRICE}
+
+# 	output:
+# 		/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/stage1_result_260126.md
+
+
+
+
+
+# stage_2.
+
+# 	process:
+# 		chatgpt5.2 in web browser 
+
+# 	input:
+# 		유가 프롬프트_stage2_260126.md
+# 		Input 'increase' or 'decrease' in place of {MAIN_SCENARIO} of '유가 프롬프트_stage2_260126.md' as same as '유가 프롬프트_stage1_260126.md'
+# 		Input '{DATE_RANGE}' of DATE_RANGE = {DATE_RANGE} of '유가 프롬프트_stage2_260126.md'. get data from stage1_result_260126.md, which is same as '{DATE_RANGE}'' of DATE_RANGE = {DATE_RANGE} from '유가 프롬프트_stage1_260126.md'  
+# 		Input '{BASE_PRICE}' of 'BASE_PRICE = {BASE_PRICE}'of '유가 프롬프트_stage2_260126.md', '{FORECAST_PRICE}'' of 'FORECAST_PRICE = {FORECAST_PRICE}' of '유가 프롬프트_stage2_260126.md'
+# 		stage1_result_260126.md
+# 		oil_market_lexicon_v3.json
+
+
+# 	output:
+# 		'SKT_유가전망_AI모델_전망리포트_브렌트유_260126.md' with out appendix 2, 3, 4.
+
+# 	comment:
+# 		appendix 2, 3, 4 come from 
+# 		/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/impact_category_monthly.png
+# 		/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/impact_week_top_variable_A.png
+# 		/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/impact_week_top_variable_B.png
+# 		/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/impact_month_top_variable_A.png
+# 		/Users/shinkyu/Downloads/SKCC/550. AI Agent/550.15.Model_Explainability_Report/550.15.02.SKE/Prompt/20260118/input_data/Model/20260109/impact_month_top_variable_B.png
+
+
+
