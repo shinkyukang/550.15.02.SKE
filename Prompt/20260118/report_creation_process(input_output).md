@@ -22,14 +22,34 @@
 
     ### Process
     ```
-    run code at {CODE}/
+    python {CODE}/main.py
     ```
+    - 호출: `MarketAgentsGraph.propagate(company_name, target_date)`
+
+    ### Parameters
+    | 파라미터         | 값                       |
+    | ---------------- | ------------------------ |
+    | `company_name`   | `Brent crude oil price`  |
+    | `target_date`    | `YYYY-MM-DD`             |
+
+    ### Config (`{CODE}/marketagents/default_config.py`)
+    | 설정                       | 값         | 비고                                                                      |
+    | -------------------------- | ---------- | ------------------------------------------------------------------------- |
+    | `llm_provider`             | `openai`   |                                                                           |
+    | `deep_think_llm`           | `o3`       | Market Analyst, Fundamentals Analyst, Research Manager, Risk Manager       |
+    | `quick_think_llm`          | `gpt-4.1`  | News Analyst, Social Media Analyst, Bull/Bear Researchers, Trader, Risk Debaters |
+    | `max_debate_rounds`        | `2`        | Bull/Bear 토론 횟수                                                       |
+    | `max_risk_discuss_rounds`  | `1`        | 리스크 토론 횟수                                                          |
+    | `max_recur_limit`          | `100`      |                                                                           |
+    | `online_tools`             | `true`     | 실시간 데이터 수집 여부                                                   |
 
     ### Input
-    | 파일명              | 설명                 |
-    | ------------------- | -------------------- |
-    | `AA-OIL_BRENT.csv`  | 브렌트유 가격 데이터 |
-    | `recent_x_data.csv` | 최근 설명변수 데이터 |
+    | 파일명              | 설명                                            |
+    | ------------------- | ----------------------------------------------- |
+    | `AA-OIL_BRENT.csv`  | 브렌트유 가격 데이터 (최근 250일 사용)           |
+    | `recent_x_data.csv` | 200+ 설명변수 데이터 (전체 행 사용)              |
+
+    > **Note:** 두 CSV 파일 모두 target_date까지의 데이터를 포함해야 함
 
     ### Output
     ```

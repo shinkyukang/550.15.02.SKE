@@ -9,11 +9,29 @@
     "EVAL_RESULTS": "{CODE}/eval_results/Brent crude oil price/MarketAgentsStrategy_logs"
   },
   "stage_0": {
-    "process": "run code at {CODE}/",
-    "input": [
-      "{CODE}/marketagents/data/AA-OIL_BRENT.csv",
-      "{CODE}/marketagents/data/recent_x_data.csv"
-    ],
+    "process": "python {CODE}/main.py",
+    "process_detail": "MarketAgentsGraph.propagate(company_name, target_date)",
+    "parameters": {
+      "company_name": "Brent crude oil price",
+      "target_date": "[UPDATE before each run] YYYY-MM-DD (prediction target date)"
+    },
+    "config": {
+      "file": "{CODE}/marketagents/default_config.py",
+      "llm_provider": "openai",
+      "deep_think_llm": "o3 (Market Analyst, Fundamentals Analyst, Research Manager, Risk Manager)",
+      "quick_think_llm": "gpt-4.1 (News Analyst, Social Media Analyst, Bull/Bear Researchers, Trader, Risk Debaters)",
+      "max_debate_rounds": 2,
+      "max_risk_discuss_rounds": 1,
+      "max_recur_limit": 100,
+      "online_tools": true
+    },
+    "input": {
+      "data_files": [
+        "{CODE}/marketagents/data/AA-OIL_BRENT.csv (historical Brent crude prices, last 250 days used)",
+        "{CODE}/marketagents/data/recent_x_data.csv (200+ fundamental variables, all rows used)"
+      ],
+      "data_note": "[UPDATE before each run] both CSV files must be replaced with latest data up to target_date"
+    },
     "output": "{EVAL_RESULTS}/full_states_log_YYYY-MM-DD.json"
   },
   "stage_1": {
