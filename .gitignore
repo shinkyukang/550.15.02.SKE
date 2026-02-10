@@ -7,3 +7,14 @@
 # Add below lines to exclude OS settings and caches
 .trash/
 .DS_Store
+
+
+# Exclude Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
