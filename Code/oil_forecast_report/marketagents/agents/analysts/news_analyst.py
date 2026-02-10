@@ -25,7 +25,7 @@ def create_news_analyst(llm, toolkit):
             - If exact dates are not available, monthly granularity is acceptable (e.g., "August 2025", "July 2025")
             - Exclude any events older than 1 month from the current analysis date
             - Prioritize the most recent and impactful events within this timeframe"""
-            + """ Make sure to append a 4-to-5-row Makrdown table at the end of the report to organize key points in the report, organized and easy to read. Use these columns: Date, Event, Net Impact (%), Rationale, Source & URL. ⚠️ 필수: 날짜 순으로 정렬 (오래된 날짜 → 최근 날짜). Here, Net Impact indicates "bullish" level (overall ratio) in percentage (negative means bearish). Use your prior knowledge to determine the level between -100% ~ 100% (always use this scale). Use all available tools to produce Net Impact and Rationale.
+            + """ Make sure to append a 4-to-5-row Markdown table at the end of the report to organize key points in the report, organized and easy to read. Use these columns: Date, Event, Net Impact (%), Rationale, Source & URL. ⚠️ 필수: 날짜 순으로 정렬 (오래된 날짜 → 최근 날짜). Here, Net Impact indicates "bullish" level (overall ratio) in percentage (negative means bearish). Use your prior knowledge to determine the level between -100% ~ 100% (always use this scale). Use all available tools to produce Net Impact and Rationale.
 
             **MANDATORY SCORING REQUIREMENTS**:
             - ALWAYS use 5% increments only (e.g., -90%, -35%, 0%, +20%, +85%)
