@@ -2,7 +2,7 @@
 .env
 
 # Claude Code local settings
-.claude/
+.claude
 
 # to exclude Obsidian's settings (including plugin and hotkey configurations)
 .obsidian/
