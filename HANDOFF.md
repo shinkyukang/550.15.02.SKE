@@ -1,6 +1,6 @@
 # HANDOFF — 유가 전망 보고서 파이프라인 리뷰 작업 인수인계
 
-> 작성일: 2026-02-09
+> 작성일: 2026-02-09 (최종 갱신: 2026-02-10)
 > 목적: 다음 에이전트가 이 파일만 읽고 작업을 이어갈 수 있도록 정리
 
 ---
@@ -27,7 +27,19 @@
 │   ├── report_creation_process(input_output).yaml
 │   ├── report_creation_process(input_output).md
 │   └── oil_market_lexicon_v3.json
-└── input_data/                        ← 모델 입력/프롬프트 입력 데이터
+├── input_data/                        ← 모델 입력/프롬프트 입력 데이터
+├── archive/                           ← 과거 실행 결과 아카이브
+│   ├── 20251114/
+│   ├── 20251208/
+│   └── 20260116/
+├── HANDOFF.md
+└── .claude/                           ← Claude Code 로컬 설정
+
+{ROOT}_worktrees/                      ← Git worktree (외부, 형제 폴더)
+├── refactor-stage0/                   ← refactor/stage0 브랜치
+├── feature-stage1-automation/         ← feature/stage1-automation 브랜치
+├── feature-stage2-automation/         ← feature/stage2-automation 브랜치
+└── docs-prompts/                      ← docs/prompts 브랜치
 ```
 
 3단계 파이프라인: Stage 0 (Python 멀티에이전트 실행) → Stage 1 (ChatGPT 프롬프트) → Stage 2 (ChatGPT 프롬프트) → 최종 리포트
@@ -92,6 +104,28 @@
 - Risk Manager가 news_report를 중복 참조하고 fundamentals_report를 누락하던 버그였음
 - 사용자가 직접 수정 (에이전트 식별 → 사용자 수정)
 
+### 7. 디렉토리 구조 정리 — archive/ 생성
+
+- 프로젝트 루트의 날짜별 폴더 3개(`20251114/`, `20251208/`, `20260116/`)를 `archive/` 하위로 이동
+- `git mv`로 이동하여 git 히스토리 보존
+- 커밋: `db7de66` — "Move date-based archive folders into archive/ directory"
+- origin/main에 push 완료
+
+### 8. Git worktree 브랜치 전략 수립 및 생성
+
+개발 계획에 따라 4개 브랜치를 생성하고 외부 worktree로 연결:
+
+| 브랜치 | worktree 폴더명 | 목적 |
+|--------|----------------|------|
+| `refactor/stage0` | `refactor-stage0/` | Stage 0 코드 로직/구조 개선 |
+| `feature/stage1-automation` | `feature-stage1-automation/` | Stage 1 프롬프트를 코드로 구현 |
+| `feature/stage2-automation` | `feature-stage2-automation/` | Stage 2 프롬프트를 코드로 구현 |
+| `docs/prompts` | `docs-prompts/` | 프롬프트 문서 검토/정리 |
+
+- worktree 위치: `{ROOT}_worktrees/` (프로젝트 루트와 형제 폴더, 외부 방식)
+- 모든 브랜치가 `db7de66` (main 최신)에서 분기
+- 각 worktree에 `.claude/` 심볼릭 링크 생성 → 원본 `.claude/` 공유
+
 ---
 
 ## 미완료 / 보류 사항
@@ -122,6 +156,8 @@
 
 ## 다음 단계 제안
 
-1. **Stage 1 보류 항목 재논의** — 미사용 변수 정리, DATE_RANGE 범위 명확화
-2. **파일명 `aggresive_debator.py` 변경 여부** — 사용자가 현재 보류 지시했으므로 별도 확인 필요
-3. **graph/prompts/ 내 프롬프트 템플릿 검토** — `introduction.txt`, `main_body.txt`, `conclusion.txt`의 heading 계층 불일치 및 한영 혼용 표현 (탐색 시 식별했으나 아직 상세 리뷰/수정 미진행)
+1. **`refactor/stage0` worktree에서 Stage 0 코드 개선 시작** — 로직/구조 리팩토링
+2. **Stage 1 보류 항목 재논의** — 미사용 변수 정리, DATE_RANGE 범위 명확화
+3. **파일명 `aggresive_debator.py` 변경 여부** — 사용자가 현재 보류 지시했으므로 별도 확인 필요
+4. **graph/prompts/ 내 프롬프트 템플릿 검토** — `introduction.txt`, `main_body.txt`, `conclusion.txt`의 heading 계층 불일치 및 한영 혼용 표현 (탐색 시 식별했으나 아직 상세 리뷰/수정 미진행)
+5. **Stage 1 → Stage 2 순서로 코드 자동화 구현** — 각 feature 브랜치에서 작업 후 main에 머지
