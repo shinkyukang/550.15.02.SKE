@@ -40,71 +40,101 @@ markdown = f"""# Brent Crude Oil Complete Analysis Report
 **Company of Interest:** {report['company_of_interest']}
 
 ---
+---
+---
+---
 
-## 1️⃣ Market Report (Daily Chart Assessment)
+## 💡1-1 Market Report
 
 {report['market_report']}
 
 ---
+---
 
-## 2️⃣ Sentiment Report
+## 💡1-2 Sentiment Report
 
 {report['sentiment_report']}
 
 ---
+---
 
-## 3️⃣ News Report
+## 💡1-3 News Report
 
 {report['news_report']}
 
 ---
+---
 
-## 4️⃣ Fundamentals Report
+## 💡1-4 Fundamentals Report
 
 {report['fundamentals_report']}
 
 ---
+---
+---
+---
 
-## 5️⃣ Investment Plan
+## 💡2-1 Investment Plan
 
 {report['investment_plan']}
 
 ---
-
-## 6️⃣ Final Trade Decision
-
-{report['final_trade_decision']}
-
 ---
 
-## 📈 Bull Case Analysis
+## 💡2-2 📈 Investment_Debate - Bull History(Case Analysis)
 
 {report['investment_debate_state']['bull_history']}
 
 ---
+---
 
-## 📉 Bear Case Analysis
+## 💡2-3 📉 Investment_Debate - Bear History(Case Analysis)
 
 {report['investment_debate_state']['bear_history']}
 
 ---
+---
+---
+---
 
-## 🔥 Risky Analyst View
+## 💡3-1 Trader Investment_Plan
+
+{report['trader_investment_plan']}
+
+---
+---
+
+## 💡3-2 Final Trade Decision
+
+{report['final_trade_decision']}
+
+---
+---
+
+## 💡4-1 RISK DEBATE -Risky History(Analyst View)
 
 {report['risk_debate_state']['risky_history']}
 
 ---
+---
 
-## 🛡️ Safe Analyst View
+## 💡4-2 🛡️ RISK DEBATE -Safe History(Analyst View)
 
 {report['risk_debate_state']['safe_history']}
 
 ---
+---
 
-## ⚖️ Neutral Analyst View
+## 💡4-3 ⚖️ RISK DEBATE -Neutral History(Analyst View)
 
 {report['risk_debate_state']['neutral_history']}
+
+---
+---
+---
+---
 """
+
 
 # 파일로 저장
 with open(output_file, 'w', encoding='utf-8') as f:
