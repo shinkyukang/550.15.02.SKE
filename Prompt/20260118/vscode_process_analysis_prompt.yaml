@@ -6,4 +6,4 @@
 # stage_0는 코드를 활용하고, stage_1과 stage_2는 chatgpt 5.2 웹브라우저를 활용해서 최종 결과물을 얻고 있어. 
 
 # 너는 agent 개발 전문가 및 prompt engineering 전문가야. 
-# yaml파일을 읽어서 전체 프로세스를 파악하고, 최종 결과물을 얻는 과정을 진단을 해줘. Prompt의 정제, oil_market_lexicon_v3.json를 포함한 효율화를 염두하고 진행해줘.
+# yaml파일을 읽어서 전체 프로세스를 파악하고, 최종 결과물을 얻는 과정을 진단을 해줘. Prompt를 정제 및 효율화하는 것, oil_market_lexicon_v3.json를 정제 및 효율화하는 것 염두하고 진행해줘.
